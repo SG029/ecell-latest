@@ -73,7 +73,7 @@ body {
     .navbar-menu {
       display: none; /* Hide the regular menu initially */
       position: absolute;
-      top: 70px; /* Position below the navbar */
+      top: 75px; /* Position below the navbar */
       left: 0;
       width: 100%;
       background-color: #1c191c; /* Dark background */
@@ -116,6 +116,7 @@ body {
   .navbar {
     position: fixed;
     top: 0;
+    padding-top: 15px;
     left: 0;
     width: 100%;
     height: 70px;
@@ -375,7 +376,7 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    min-height: 100vh;
+    min-height: 75vh;
   }
   
   .wrapper-about {
@@ -486,6 +487,8 @@ body {
     margin: 50px 0;
 }
 .events-section{
+    margin-top: 17vh;
+    height: auto;
     background-color: #1c191c;
     /* height: auto; */
 }
@@ -505,13 +508,16 @@ body {
     overflow: hidden;
     display: flex;
     align-items: center;
+   
 }
 
 .events-container {
+    margin-top: 5vh;
     display: flex;
     gap: 20px;
     transition: transform 0.4s ease;
     will-change: transform;
+    
 }
 
 .event-card {
@@ -522,6 +528,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 100000;
 }
 
 .event-card:hover {
@@ -603,6 +610,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -7vw;
 }
 
 .section-title {
@@ -613,6 +621,7 @@ body {
 }
 
 .team-container {
+  
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
     gap: 0rem;
@@ -621,14 +630,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: -10vw;
 }
 
 .team-member {
-    background-color: black; /* Slightly lighter background for cards */
+    background-color: inherit; /* Slightly lighter background for cards */
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 300px;
     margin: 0 auto; /* Center the team-member card */
@@ -720,13 +731,12 @@ body {
     }
 
     .team-member p {
-        font-size: 0.8rem; /* Adjust paragraph font size */
+        font-size: 0.8rem; 
     }
 }
 
 .footer {
     min-height: 30vh;
-    /* background-color: ; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -772,7 +782,8 @@ body {
   
   
   .left-footer h1 {
-    font-size: 10rem;
+    font-size: 4vw;
+    margin-bottom: 19px;
     color: BLACK;
     font-family: "MONUMENT", sans-serif;
     letter-spacing: 0.2rem;
@@ -796,9 +807,9 @@ body {
     margin-right: 5rem;
   }
   .socials h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: black;
-    font-family: "six caps", sans-serif;
+    font-family: "monument", sans-serif;
     font-weight: 100;
     letter-spacing: 0.1rem;
     text-align: center;
@@ -825,9 +836,9 @@ body {
     gap: 20px;
   }
   .pages h2{
-    font-size: 4rem;
+    font-size: 3rem;
     color: BLACK;
-    font-family: "six caps", sans-serif;
+    font-family: "monument", sans-serif;
     font-weight: 100;
     letter-spacing: 0.1rem;
     text-align: center;
@@ -1125,3 +1136,137 @@ body {
       font-size: 3rem;
     }
   }
+
+
+
+
+  /* hello */
+
+  /* Styling for the section */
+/* Styling for the section */
+.mar-01 {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFE601;
+  color: black;
+  font-family: "monument", sans-serif;
+  overflow: hidden; /* Hide content that moves out of bounds */
+  position: relative;
+  white-space: nowrap; /* Prevent the text from wrapping */
+}
+
+/* Wrapper for the scrolling content */
+.marquee-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Content that scrolls */
+.marquee-content {
+  display: flex;
+  gap: 40px;
+  animation: scroll-infinite 15s linear infinite; /* Control the speed */
+}
+
+/* Content inside marquee */
+.marquee-content h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Keyframe animation for continuous scroll */
+@keyframes scroll-infinite {
+  from {
+    transform: translateX(0); /* Start position */
+  }
+  to {
+    transform: translateX(-100%); /* Move to the left */
+  }
+}
+
+#prevBtn{
+  position: absolute;
+  margin-right: 20vw;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Gallery Section */
+.gallery {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr); /* Two images per row */
+  gap: 20px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.gallery h1{
+  margin-top: 5vw;
+  color: #FFE601;
+  font-family: 'monument bold', sans-serif;
+  font-size: 5rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+  margin-top: 3vw;
+  width: auto;
+  height: 15vw;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 20px;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Caption */
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .caption {
+  opacity: 1;
+}
+
+.hellooooJIIIII-01{
+  display: flex;
+  justify-content: center;
+  align-items: center
+  ;
+  gap: 5vw;
+}
