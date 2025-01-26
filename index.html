@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Cell</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="nav-logo">
+          <!-- <img src="./assets/images/logo2.png" alt="E-Cell Logo" class="logo" /> -->
+          <a href="#" class="navbar-logo">E-Cell</a>
+        </div>
+
+        <div class="burger-menu" id="burgerMenu">
+          <i class="ri-menu-line"></i>
+        </div>
+
+        <ul class="navbar-menu">
+          <li class="navvv"><a href="#home">Home</a></li>
+          <li class="navvv"><a href="#about-us">About</a></li>
+          <li class="navvv"><a href="#past-events">Events</a></li>
+          <li class="navvv"><a href="#team">Team</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="main">
+      <div class="cursor"></div>
+      <section id="home" class="hero">
+        <video autoplay muted loop id="hero-video">
+          <source src="./img/bg.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="translucent-div"></div>
+        <div class="wrapper">
+          <div class="hero-content">
+            <h1>E-Cell</h1>
+            <h1>IIIT Delhi</h1>
+          </div>
+          <img class="logoo" src="./img/logo.png" alt="" />
+        </div>
+        <div class="arrow-container">
+          <a href="#about-us" id="arrow">
+            <i class="ri-arrow-down-line"></i>
+          </a>
+        </div>
+      </section>
+
+      <section id="about-us" class="about-us">
+        <div class="wrapper-about">
+          <div class="about-heading">
+            <h1>ABOUT US</h1>
+          </div>
+          <div class="about-us-content">
+            <p>
+              E-Cell, IIITD is a vibrant community dedicated to fostering
+              entrepreneurship and innovation within the IIITD ecosystem. Our
+              mission is to inspire, educate, and empower students to transform
+              their ideas into impactful ventures. By nurturing a culture of
+              creativity and collaboration, E-Cell provides students with the
+              resources and mentorship needed to excel in the entrepreneurial
+              journey. Through workshops, networking events, and competitions,
+              we aim to bridge the gap between academia and industry,
+              encouraging students to explore their passions and build
+              sustainable solutions. In this thriving environment, individuals
+              are motivated to take initiative, innovate, and contribute to a
+              dynamic entrepreneurial ecosystem where success is shared and
+              celebrated collectively.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="events-section">
+        <h1 class="section-title">OUR EVENTS</h1>
+        <div class="events-slider">
+          <button class="slider-btn prev" id="prevBtn">
+            <i class="ri-arrow-left-s-line"></i>
+          </button>
+          <div class="events-container" id="past-events">
+            <div class="event-card">
+              <h2>Hackathon 2025</h2>
+              <p>
+                Join us for an exciting coding marathon to solve real-world
+                problems.
+              </p>
+            </div>
+            <div class="event-card">
+              <h2>Startup Pitch</h2>
+              <p>
+                Pitch your startup idea and win mentorship and funding
+                opportunities.
+              </p>
+            </div>
+            <div class="event-card">
+              <h2>Networking Night</h2>
+              <p>Connect with industry leaders, peers, and entrepreneurs.</p>
+            </div>
+            <div class="event-card">
+              <h2>Innovation Expo</h2>
+              <p>
+                Showcase your projects and get valuable feedback from experts.
+              </p>
+            </div>
+          </div>
+          <button class="slider-btn next" id="nextBtn">
+            <i class="ri-arrow-right-s-line"></i>
+          </button>
+        </div>
+      </section>
+      <section id="team" class="team-section">
+        <h1 class="section-title">OUR TEAM</h1>
+        <div class="team-container">
+          <div class="team-member">
+            <img src="./img/Team-01.png" alt="Team Member 1" />
+            <h2>ABHIGYAN</h2>
+            <p>DEVELOPER</p>
+          </div>
+          <div class="team-member">
+            <img src="./img/Team-02.jpg" alt="Team Member 2" />
+            <h2>SUSHANT</h2>
+            <p>DEVELOPER</p>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="translucent-divvv">
+            <div class="left-footer">
+              <h1>E-CELL</h1>
+              <button class="mailbutton">
+                <a href="mailto:ecell@iiitd.ac.in">
+                  <img src="./assets/images/mail.png" alt="" />
+                  <h3>ecell@iiitd.ac.in</h3>
+                </a>
+              </button>
+            </div>
+            <div class="right-footer">
+              <div class="socials">
+                <h2>OUR SOCIALS</h2>
+                <div class="social-link">
+                  <a href="https://www.instagram.com/ecell_iiitd/"
+                    >Instagram</a
+                  >
+                  <a
+                    href="https://www.linkedin.com/company/iiitdecell/posts/?feedView=all"
+                    >LinkedIn</a
+                  >
+                </div>
+              </div>
+              <div class="pages">
+                <h2>OUR PAGES</h2>
+                <div class="page-link">
+                  <a href="#home">Home</a>
+                  <a href="#about-us">About</a>
+                  <a href="#past-events">Events</a>
+                  <a href="#team">Team</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="copy">
+          Copyright © 2025 | Designed & Developed by
+          <span class="names"
+            ><a
+              href="https://github.com/SG029"
+              target="_blank"
+              class="github-link"
+            >
+            Sushant Gola
+            </a
+            ></span
+          >
+          &
+          <span class="names">
+            <a
+              href=""
+              target="_blank"
+              class="github-link"
+            >
+              Abhigyan
+            </a>
+          </span>
+        </h3>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
