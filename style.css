@@ -1151,7 +1151,7 @@ body {
   justify-content: center;
   background-color: #FFE601;
   color: black;
-  font-family: "monument", sans-serif;
+  font-family: "monument bold", sans-serif;
   overflow: hidden; /* Hide content that moves out of bounds */
   position: relative;
   white-space: nowrap; /* Prevent the text from wrapping */
@@ -1173,7 +1173,7 @@ body {
 }
 
 /* Content inside marquee */
-.marquee-content h1 {
+.marquee-content h2 {
   font-size: 2rem;
   margin: 0;
 }
