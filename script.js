@@ -63,3 +63,21 @@ prevBtn.addEventListener("click", () => {
     if (scrollAmount < 0) scrollAmount = 0; // Prevent overscroll
     eventsContainer.style.transform = `translateX(-${scrollAmount}px)`;
 });
+
+document.querySelector('.mailbutton').addEventListener('mousemove', (e) => {
+    const button = e.currentTarget;
+    const rect = button.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+  
+    // Amplify the movement by increasing the multiplier
+    button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1)`;
+  });
+  
+  document.querySelector('.mailbutton').addEventListener('mouseleave', (e) => {
+    const button = e.currentTarget;
+  
+    // Reset the transform property
+    button.style.transform = 'translate(0, 0) scale(1)';
+  });
+  
