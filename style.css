@@ -53,35 +53,34 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #1c191c;
+    background-color: hsl(300, 6%, 10%);
 }
-
 /* Burger Menu */
 .burger-menu {
-    display: none; /* Hide by default */
-    position: relative;
-    z-index: 1001; /* Ensure it's above the navbar */
-    cursor: pointer;
-  }
-  
-  .burger-menu i {
-    font-size: 2rem;
-    color: #ffe600; /* Or your desired color */
-    text-decoration: none; /* Remove underline */
-    transition: transform 0.3s ease; /* Smooth transition for rotation */
-  }
-  
-  .burger-menu.active i {
-    transform: rotate(90deg); /* Rotate the icon when active */
-  }
-  
-  /* Media Query for responsiveness (e.g., 768px) */
-  @media (max-width: 768px) {
-    .burger-menu {
+  display: none; /* Hide by default */
+  position: relative;
+  z-index: 1001; /* Ensure it's above the navbar */
+  cursor: pointer;
+}
+
+.burger-menu i {
+  font-size: 2rem;
+  color: #ffe600; /* Or your desired color */
+  text-decoration: none; /* Remove underline */
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+.burger-menu.active i {
+  transform: rotate(90deg); /* Rotate the icon when active */
+}
+
+/* Media Query for responsiveness (e.g., 768px) */
+@media (max-width: 768px) {
+  .burger-menu {
       display: block; /* Show the burger menu on smaller screens */
-    }
-  
-    .navbar-menu {
+  }
+
+  .navbar-menu {
       display: none; /* Hide the regular menu initially */
       position: absolute;
       top: 75px; /* Position below the navbar */
@@ -91,109 +90,109 @@ body {
       flex-direction: column;
       align-items: center;
       padding: 20px 0;
-      transform: translateY(-100%); /* Hide off-screen initially */
-      transition: transform 0.3s ease; /* Smooth slide-in effect */
-    }
-  
-    .navbar-menu.active {
+      transform: translateY(-100%); /* Hidden above the screen */
+      opacity: 0; /* Make it fully invisible */
+      visibility: hidden; /* Prevent interaction */
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease; /* Smooth slide-in effect */
+  }
+
+  .navbar-menu.active {
       /* When the menu is active */
       display: flex;
       transform: translateY(0); /* Slide in */
-    }
-  
-    .navbar-menu li {
+      opacity: 1; /* Make it visible */
+      visibility: visible; /* Allow interaction */
+  }
+
+  .navbar-menu li {
       margin: 10px 0; /* Add spacing between menu items */
-    }
-  
-    /* .navvv {
-      background-color: #89d1dd;
-    } */
-    .navbar-menu a {
+  }
+
+  .navbar-menu a {
       font-family: "Archivo", sans-serif;
       font-size: 1.1rem;
       font-weight: 600;
       color: #ffe600; /* Gold color for links */
       text-decoration: none; /* Remove underline from links */
       transition: color 0.3s ease; /* Smooth color change on hover */
-      /* background-color: #44b1cb; */
-    }
-  
-    .navbar-menu a:hover {
-      color: #ffe600; /* Change to a brighter gold color on hover */
-    }
   }
-  
-  /* Navbar */
-  .navbar {
-    position: fixed;
-    top: 0;
-    padding-top: 15px;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background-color: transparent; /* Matches the dark theme of the page */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(10px); /* Apply backdrop filter for a frosted glass effect */
-    -webkit-backdrop-filter: blur(10px); /* Webkit version for older browser support */
-    z-index: 1000; /* Ensures the navbar is always on top */
+
+  .navbar-menu a:hover {
+      color: #ffe600; /* Change to a brighter gold color on hover */
+  }
 }
 
-  
-  .navbar-container {
-    width: 90%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Logo and Text */
-  .nav-logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-logo .logo {
-    height: 35px; /* Adjust logo size */
-    width: auto;
-    margin-right: 20px;
-  }
-  
-  .navbar-logo {
-    font-family: "Monument", sans-serif;
-    font-size: 1.7rem;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    color: #fff; /* Gold accent color */
-    text-decoration: none; /* Remove underline */
-    line-height: 1.1rem;
-  }
-  
-  /* Navbar Menu */
-  .navbar-menu {
-    list-style: none;
-    display: flex;
-    gap: 50px;
-    margin: 0;
-    padding: 0;
-    padding: 10px;
-  }
-  
-  .navbar-menu li {
-    display: inline;
-  }
-  
-  .navbar-menu a {
-    color: #fff;
-    text-decoration: none; /* Remove underline from links */
-    font-family: "Archivo", sans-serif;
-    font-size: 1.1rem;
-    transition: color 0.3s ease; /* Smooth color change on hover */
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-  }
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  padding-top: 15px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: transparent; /* Matches the dark theme of the page */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px); /* Apply backdrop filter for a frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Webkit version for older browser support */
+  z-index: 1000; /* Ensures the navbar is always on top */
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo and Text */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo .logo {
+  height: 35px; /* Adjust logo size */
+  width: auto;
+  margin-right: 20px;
+}
+
+.navbar-logo {
+  font-family: "Monument", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  color: #fff; /* Gold accent color */
+  text-decoration: none; /* Remove underline */
+  line-height: 1.1rem;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+}
+
+.navbar-menu li {
+  display: inline;
+}
+
+.navbar-menu a {
+  color: #fff;
+  text-decoration: none; /* Remove underline from links */
+  font-family: "Archivo", sans-serif;
+  font-size: 1.1rem;
+  transition: color 0.3s ease; /* Smooth color change on hover */
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
   
   .navvv {
     padding: 5px; /* Add padding to give it button-like feel */
