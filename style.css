@@ -1,20 +1,20 @@
 @font-face {
     font-family: "Archivo";
-    src: url("assets/fonts/Archivo-Regular.ttf") format("truetype"),
-      url("assets/fonts/Archivo-Italic.ttf") format("truetype"),
-      url("assets/fonts/Archivo-Bold.ttf") format("truetype"),
-      url("assets/fonts/Archivo-BoldItalic.ttf") format("truetype"),
-      url("assets/fonts/Archivo-Medium.ttf") format("truetype"),
-      url("assets/fonts/Archivo-MediumItalic.ttf") format("truetype"),
-      url("assets/fonts/Archivo-SemiBold.ttf") format("truetype"),
-      url("assets/fonts/Archivo-SemiBoldItalic.ttf") format("truetype");
+    src: url("assests/fonts/Archivo-Regular.ttf") format("truetype"),
+      url("assests/fonts/Archivo-Italic.ttf") format("truetype"),
+      url("assests/fonts/Archivo-Bold.ttf") format("truetype"),
+      url("assests/fonts/Archivo-BoldItalic.ttf") format("truetype"),
+      url("assests/fonts/Archivo-Medium.ttf") format("truetype"),
+      url("assests/fonts/Archivo-MediumItalic.ttf") format("truetype"),
+      url("assests/fonts/Archivo-SemiBold.ttf") format("truetype"),
+      url("assests/fonts/Archivo-SemiBoldItalic.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
   
   @font-face {
     font-family: "Six Caps";
-    src: url("assets/fonts/SixCaps.ttf") format("truetype");
+    src: url("fonts/SixCaps.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
@@ -87,12 +87,13 @@ body {
       top: 75px; /* Position below the navbar */
       left: 0;
       width: 100%;
-      background-color: #1c191c; /* Dark background */
+      /*background-color: #1c191c; /* Dark background */
       flex-direction: column;
       align-items: center;
       padding: 20px 0;
+        opacity: 0.6;
       transform: translateY(-100%); /* Hide off-screen initially */
-      transition: transform 0.3s ease; /* Smooth slide-in effect */
+      /*transition: transform 0.3s ease; /* Smooth slide-in effect */
     }
   
     .navbar-menu.active {
@@ -169,6 +170,7 @@ body {
     color: #fff; /* Gold accent color */
     text-decoration: none; /* Remove underline */
     line-height: 1.1rem;
+    z-index: 1;
   }
   
   /* Navbar Menu */
@@ -265,6 +267,10 @@ body {
     filter: brightness(0.6); /* Darkens the video for better text contrast */
 }
 
+.arrow-down {
+  height: 40%;
+}
+
 .translucent-div {
     position: absolute;
     top: 0;
@@ -286,6 +292,7 @@ body {
     width: 70%;
     display: flex;
     justify-content: space-between;
+  flex-direction: row;
     align-items: center;
     text-align: center;
     color: #fff;
@@ -298,36 +305,40 @@ body {
     border-radius: 10px; /* Rounded corners for better appearance */
 }
 .hero-content {
-    position: relative;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    z-index: 2;
-    text-transform: uppercase;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  z-index: 2;
+  width: fit-content;
+  text-transform: uppercase;
 }
 
 .hero-content h1 {
-    font-family: "Monument bold", sans-serif;
-    font-size: 6rem;
-    letter-spacing: 0.3rem;
-    text-align: center;
-    color: #ffe600;
-    font-weight: bold;
-    margin: 0;
-    font-weight: 500;
+  font-family: "Monument bold", sans-serif;
+  font-size: clamp(2.5rem, 8vw, 6rem); /* Adjusts dynamically */
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: #ffe600;
+  font-weight: 500;
+  margin: 0;
 }
+
 .hero-content h1:nth-child(2) {
-    margin-top: -3rem;
-    font-size: 4.7rem;
-    font-weight: 300;
-    font-family: "Monument", sans-serif;
-    color: #fff;
+  margin-top: -0.3rem;
+  font-size: clamp(2rem, 6.5vw, 4.7rem); /* Adjusts dynamically */
+  font-weight: 300;
+  font-family: "Monument", sans-serif;
+  color: white;
 }
+
+
 .logoo{
     width: 400px;
     height: auto;
+    transition: ease-in 250ms;
 }
 .arrow-container {
     position: absolute;
@@ -438,7 +449,8 @@ body {
   
   @media (max-width: 768px) {
     .wrapper {
-      width: 90%;
+      width: 85%;
+      flex-direction: column;
     }
   
     .about-heading h1 {
@@ -462,12 +474,48 @@ body {
     .stat-box p {
       font-size: 0.9rem;
     }
+    .hero-content h1{
+      font-size: 3.5rem;
+    }
+    .hero-content h1:nth-child(2){
+      font-size: 3.5rem;
+      margin-top: 0.1rem;
+    }
+    .logoo{
+      width: 350px;
+      transition: ease-in-out 0.5s;
+    }
+    #arrow {
+      width: 100px;
+      height: 100px;
+    }
+
+    .ri-arrow-down-line{
+      width: 100%;
+    }
   }
   
   /* Media Query for 480px */
   @media (max-width: 480px) {
+    .hero{
+      width: 500px;
+
+    }
+
+    .hero-content{
+      align-items: center;
+      width: 100%;
+      padding: 1.5rem;
+    }
+
+    #hero-video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
     .wrapper {
-      width: 95%;
+      width: 100%;
     }
   
     .about-heading h1 {
@@ -491,6 +539,10 @@ body {
   
     .stat-box p {
       font-size: 0.8rem;
+    }
+    .logoo{
+      width: 75%;
+      height: auto;
     }
   }
   .events-section {
@@ -860,6 +912,7 @@ body {
     flex-direction: column;
     align-items: start;
     text-align: center;
+      z-index: 1;
     margin-top: -1rem;
   }
   .pages a {
