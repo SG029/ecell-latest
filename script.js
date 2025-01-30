@@ -64,6 +64,25 @@ prevBtn.addEventListener("click", () => {
     eventsContainer.style.transform = `translateX(-${scrollAmount}px)`;
 });
 
+// Hamburger menu functionality
+const burgerMenu = document.getElementById('burgerMenu');
+const navbarMenu = document.querySelector('.navbar-menu');
+
+burgerMenu.addEventListener('click', () => {
+  // Toggle the 'active' class on both the menu and burger icon
+  navbarMenu.classList.toggle('active');
+  burgerMenu.classList.toggle('active');
+});
+
+// Close the menu when a link is clicked
+const navLinks = document.querySelectorAll('.navbar-menu a');
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    navbarMenu.classList.remove('active');
+    burgerMenu.classList.remove('active');
+  });
+});
+
 document.querySelector('.mailbutton').addEventListener('mousemove', (e) => {
     const button = e.currentTarget;
     const rect = button.getBoundingClientRect();
