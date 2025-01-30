@@ -615,12 +615,12 @@ body {
     color: #ffffff; /* Light text */
     text-align: center;
     padding: 50px 20px;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 50vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -7vw;
+    margin-top: 0;
 }
 
 .section-title {
@@ -631,16 +631,15 @@ body {
 }
 
 .team-container {
-  
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 0rem;
-    width: 80%;
-    max-width: 1200px; /* Center the grid */
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: -10vw;
+    align-items: center;
+    gap: 20vw;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .team-member {
@@ -651,8 +650,8 @@ body {
     
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 300px;
-    margin: 0 auto; /* Center the team-member card */
+    max-width: 280px;
+    margin: 10px; /* Center the team-member card */
 }
 
 .team-member:hover {
@@ -688,6 +687,10 @@ body {
         font-size: 4rem; /* Slightly smaller for medium screens */
     }
 
+    .team-container{
+      margin-top: 10px;
+    }
+
     .team-member {
         padding: 15px; /* Reduce padding for smaller screens */
     }
@@ -700,16 +703,17 @@ body {
 
 @media (max-width: 768px) {
     .section-title {
-        font-size: 2.5rem; /* Adjust title size for small screens */
+        font-size: 3.4rem; /* Adjust title size for small screens */
     }
 
     .team-container {
-        gap: 3rem; /* Reduce gap between cards */
+        width: 95%;
+        padding: 10px;
+        gap: 1rem; /*Reduce gap between cards*/
     }
 
     .team-member {
-        max-width: 90%; /* Allow team-member cards to take up more space */
-        margin: 0 20px; /* Add margin for better spacing on small screens */
+        width: 250px;
     }
 
     .team-member h2 {
@@ -722,13 +726,18 @@ body {
 }
 
 @media (max-width: 480px) {
+    .team-container{
+      width:100%;
+      padding: 10px;
+    }
+
     .section-title {
         font-size: 2rem; /* Smaller font size for very small screens */
     }
 
     .team-member {
-        max-width: 100%; /* Full-width team-member cards */
-        padding: 10px; /* Reduce padding */
+        max-width: 280px; /* Full-width team-member cards */
+        margin:10px auto;
     }
 
     .team-member img {
@@ -1216,10 +1225,10 @@ h1 {
 /* Gallery Section */
 .gallery {
   display: flex;
-  grid-template-columns: repeat(2, 1fr); /* Two images per row */
-  gap: 20px;
-  padding: 20px;
   flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
 }
 
 .gallery h1 {
@@ -1227,6 +1236,7 @@ h1 {
   color: #FFE601;
   font-family: 'monument bold', sans-serif;
   font-size: 5rem;
+  text-align: center;
 }
 
 .gallery-item {
@@ -1247,8 +1257,9 @@ h1 {
   width: auto;
   height: 15vw;
   object-fit: cover;
-  transition: transform 0.3s ease;
   border-radius: 20px;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease filter 0.3s ease;
 }
 
 .gallery-item img {
@@ -1286,4 +1297,31 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 5vw;
+  width:100%;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .gallery h1 {
+    font-size: 3.5rem;
+  }
+
+  .gallery-item img {
+    height: 25vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery h1 {
+    font-size: 2.5rem;
+  }
+
+  .hellooooJIIIII-01 {
+    gap: 3vw;
+    padding: 0 15px;
+  }
+
+  .gallery-item img {
+    height: 30vw;
+  }
 }
