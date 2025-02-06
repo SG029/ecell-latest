@@ -74,12 +74,83 @@ body {
   transform: rotate(90deg); /* Rotate the icon when active */
 }
 
+/*media query for only (about and event section)
+@media (max-width: 1024px) {
+  .about-heading h1,
+  .section-title {
+    font-size: 4rem;
+  }
+  .about-us-content p {
+    font-size: 1.1rem;
+  }
+  .event-card {
+    flex: 0 0 280px;
+  }
+}
+@media (max-width: 768px) {
+  .about-us,
+  .events-section {
+    padding: 30px 15px;
+  }
+  .wrapper-about,
+  .events-slider {
+    width: 95%;
+  }
+  .about-heading h1,
+  .section-title {
+    font-size: 3.5rem;
+  }
+  .about-us-content p {
+    font-size: 1rem;
+  }
+  .event-card {
+    flex: 0 0 250px;
+  }
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .slider-btn i {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .about-us,
+  .events-section {
+    padding: 20px 10px;
+  }
+  .about-heading h1,
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .about-us-content p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  .event-card {
+    flex: 0 0 200px;
+    padding: 15px;
+  }
+  .event-card h2 {
+    font-size: 1.1rem;
+  }
+  .event-card p {
+    font-size: 0.9rem;
+  }
+  .slider-btn {
+    width: 35px;
+    height: 35px;
+  }
+  .slider-btn i {
+    font-size: 1rem;
+  }
+}
 /* Media Query for responsiveness (e.g., 768px) */
 @media (max-width: 768px) {
   .burger-menu {
       display: block; /* Show the burger menu on smaller screens */
   }
-
   .navbar-menu {
       display: none; /* Hide the regular menu initially */
       position: absolute;
@@ -95,7 +166,6 @@ body {
       transform: translateY(-100%); /* Hide off-screen initially */
       /*transition: transform 0.3s ease; /* Smooth slide-in effect */
     }
-  
     .navbar-menu.active {
 
       transform: translateY(-100%); /* Hidden above the screen */
