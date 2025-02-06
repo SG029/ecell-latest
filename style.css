@@ -104,14 +104,14 @@ body {
       transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease; /* Smooth slide-in effect */
   }
 
-/*   .navbar-menu.active {
+   .navbar-menu.active {
 
       /* When the menu is active */
       display: flex;
       transform: translateY(0); /* Slide in */
       opacity: 1; /* Make it visible */
       visibility: visible; /* Allow interaction */
-  } */
+  } 
 
   .navbar-menu li {
       margin: 10px 0; /* Add spacing between menu items */
@@ -187,7 +187,6 @@ body {
     font-weight: 600;
     letter-spacing: 0.05rem;
   }
-=======
 /* Navbar */
 .navbar {
   position: fixed;
@@ -381,7 +380,7 @@ body {
 
 }
 
-.hero-content p {
+.hero-content h1 {
   font-family: "Monument bold", sans-serif;
   font-size: clamp(2.5rem, 8vw, 6rem); /* Adjusts dynamically */
   letter-spacing: 0.2rem;
@@ -391,7 +390,7 @@ body {
   margin: 0;
 }
 
-.hero-content p:nth-child(2) {
+.hero-content h1:nth-child(2) {
   margin-top: -0.3rem;
   font-size: clamp(2rem, 6.5vw, 4.7rem); /* Adjusts dynamically */
   font-weight: 300;
