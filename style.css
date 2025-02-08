@@ -59,8 +59,9 @@ body {
 .burger-menu {
   display: none; /* Hide by default */
   position: relative;
-  z-index: 1001; /* Ensure it's above the navbar */
+  z-index: 1; /* Ensure it's above the navbar */
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .burger-menu i {
@@ -205,16 +206,10 @@ body {
   
   .navbar-container {
     width: 90%;
-    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  /* Logo and Text */
-  .nav-logo {
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
   }
   
   .nav-logo .logo {
@@ -240,7 +235,6 @@ body {
     display: flex;
     gap: 50px;
     margin: 0;
-    padding: 0;
     padding: 10px;
   }
   
@@ -274,61 +268,6 @@ body {
   z-index: 1000; /* Ensures the navbar is always on top */
 }
 
-.navbar-container {
-  width: 90%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Logo and Text */
-.nav-logo {
-  display: flex;
-  align-items: center;
-}
-
-.nav-logo .logo {
-  height: 35px; /* Adjust logo size */
-  width: auto;
-  margin-right: 20px;
-}
-
-.navbar-logo {
-  font-family: "Monument", sans-serif;
-  font-size: 1.7rem;
-  font-weight: 600;
-  letter-spacing: 0.05rem;
-  color: #fff; /* Gold accent color */
-  text-decoration: none; /* Remove underline */
-  line-height: 1.1rem;
-}
-
-/* Navbar Menu */
-.navbar-menu {
-  list-style: none;
-  display: flex;
-  gap: 50px;
-  margin: 0;
-  padding: 0;
-  padding: 10px;
-}
-
-.navbar-menu li {
-  display: inline;
-}
-
-.navbar-menu a {
-  color: #fff;
-  text-decoration: none; /* Remove underline from links */
-  font-family: "Archivo", sans-serif;
-  font-size: 1.1rem;
-  transition: color 0.3s ease; /* Smooth color change on hover */
-  font-weight: 600;
-  letter-spacing: 0.05rem;
-}
-
-  
   .navvv {
     padding: 5px; /* Add padding to give it button-like feel */
     border-radius: 10rem; /* Rounded corners */
@@ -438,16 +377,13 @@ body {
 }
 .hero-content {
   position: relative;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
   z-index: 2;
-  width: fit-content;
   white-space: nowrap;
   text-transform: uppercase;
-
+  margin: 0;
 }
 
 .hero-content h1 {
@@ -586,6 +522,9 @@ body {
       width: 85%;
       flex-direction: column;
     }
+    .arrow-container{
+      opacity: 0;
+    }
   
     .about-heading h1 {
       font-size: 4.5rem;
@@ -609,10 +548,10 @@ body {
       font-size: 0.9rem;
     }
     .hero-content h1{
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
     .hero-content h1:nth-child(2){
-      font-size: 3.5rem;
+      font-size: 3rem;
       margin-top: 0.1rem;
     }
     .logoo{
@@ -631,15 +570,11 @@ body {
   
   /* Media Query for 480px */
   @media (max-width: 480px) {
-    .hero{
-      width: 500px;
 
-    }
 
     .hero-content{
       align-items: center;
       width: 100%;
-      padding: 1.5rem;
     }
 
     #hero-video {
@@ -945,6 +880,10 @@ body {
     .team-member p {
         font-size: 0.8rem; 
     }
+    .slider-btn{
+      margin-top: 20px;
+    }
+
 }
 
 .footer {
